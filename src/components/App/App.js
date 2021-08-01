@@ -7,10 +7,10 @@ import Main from '../Main/Main';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
 import InfoTooltip from '../InfoTooltip/InfoTooltip';
-/* import PageNotFound from '../PageNotFound/PageNotFound';
+import PageNotFound from '../PageNotFound/PageNotFound';
 import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
-import Profile from '../Profile/Profile'; */
+import Profile from '../Profile/Profile';
 
 function App() {
   const history = useHistory();
@@ -51,7 +51,7 @@ function App() {
           <Header />
           <Login onLogin={onLogin} />
         </Route>
-{/* 
+ 
         <Route path='/movies'>
           <Header />
           <Movies />
@@ -71,7 +71,7 @@ function App() {
 
         <Route path='*'>
           <PageNotFound goBack={goBack} />
-        </Route> */}
+        </Route>
       </Switch>
 
       <InfoTooltip status={tooltipStatus} onClose={closeAllPopups} />

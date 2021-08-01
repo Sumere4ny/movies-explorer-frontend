@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import listIconProfile from '../../images/list-icon-profile.svg';
 import './Navigation.css';
 
 function Navigation() {
@@ -53,14 +54,19 @@ function Navigation() {
               Сохранённые фильмы
             </NavLink>
           </li>
+         
+         
           <li className='navigation__list-item'>
             <NavLink
               className='navigation__list-item-link navigation__list-item-profile link'
               to='/profile'
             >
-              Аккаунт
+              {/* <div style={{display: 'flex', justifyContent: 'space-between'}}> */}
+                <p>Аккаунт</p>
+                <img className='navigation__list-icon-profile' src={listIconProfile} alt='Профиль' />
+              {/* </div> */}
             </NavLink>
-          </li>
+          </li>        
         </ul>
       </nav>
     </div>
