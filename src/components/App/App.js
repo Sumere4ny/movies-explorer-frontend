@@ -45,11 +45,13 @@ function App() {
         <Route path='/signup'>
           <Header />
           <Register onRegister={onRegister} />
+          <Footer />
         </Route>
 
         <Route path='/signin'>
           <Header />
           <Login onLogin={onLogin} />
+          <Footer />
         </Route>
  
         <Route path='/movies'>
@@ -67,6 +69,7 @@ function App() {
         <Route path='/profile'>
           <Header />
           <Profile />
+          <Footer />
         </Route>
 
         <Route path='*'>

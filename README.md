@@ -1,4 +1,4 @@
-Адрес: https://movies-explorer.sumere4ny.icu </br>
+Адрес: https://sumere4ny-movies.nomoredomains.rocks </br>
 Ссылка на макет: https://www.figma.com/file/gjGyV3tKJnQPnZfGe5Rc49/Diploma-Copy?node-id=932%3A2802
 
 
