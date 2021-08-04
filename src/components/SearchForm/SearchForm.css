@@ -5,8 +5,14 @@
 .search__form {
   display: flex;
   flex-wrap: nowrap;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #424242;
+  transition: border-bottom .3s ease;
   padding: 0 0 9px;
+}
+
+.search__form_focus {
+  outline: 0;
+  border-bottom: 2px solid #fff;
 }
 
 .search__form-icon {

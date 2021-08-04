@@ -26,16 +26,7 @@ function Navigation() {
         }`}
       >
         <ul className='navigation__list'>
-          <li className='navigation__list-item'>
-            <NavLink
-              className='navigation__list-item-link navigation__list-item-link_hidden link'
-              exact
-              to='/'
-              activeClassName='navigation__list-item-link_active'
-            >
-              Главная
-            </NavLink>
-          </li>
+          
           <li className='navigation__list-item'>
             <NavLink
               className='navigation__list-item-link link'
