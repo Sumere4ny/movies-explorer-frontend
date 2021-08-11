@@ -20,7 +20,6 @@ function SavedMovies({
         toggleShortMovieFilter={toggleShortMovieFilter}
       />
       <MoviesCardList
-        movieDataList={movieDataList}
         handleSaveMovie={handleSaveMovie}
         savedMoviesList={savedMoviesList}
         loader={loader}

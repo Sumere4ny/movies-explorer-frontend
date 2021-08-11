@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 265px;
   box-sizing: border-box;
   background-color: #222;
 }
@@ -16,6 +17,9 @@
 .card__img {
   display: block;
   margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  height: 198px;
   width: 100%;
 }
 
@@ -26,6 +30,7 @@
 }
 
 .card__info-container {
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
@@ -36,6 +41,11 @@
   line-height: 1.2;
   margin: 0;
   padding-bottom: 9px;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
 
 .card__save-btn {

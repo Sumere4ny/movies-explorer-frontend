@@ -77,15 +77,6 @@ function App() {
           onLogin({ email, password });
         }
       })
-      /* .then(({ data }) => {
-        if (data._id) {
-          localStorage.setItem('userId', data._id);
-          setCurrentUser({ name: data.name, email: data.email });
-          setTooltipStatus(SUCCESS_STATUS);
-          setTooltipMessage(SUCCESS_REGISTRATION);
-          onLogin({ email, password });
-        } 
-      }) */
       .catch((err) => {
         setErrorMessage(err);
         console.log('Ошибка:', err);

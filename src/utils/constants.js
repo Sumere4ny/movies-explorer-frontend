@@ -1,6 +1,6 @@
 export const DEKTOP_RESOLUTION = 1280;
 export const TABLET_RESOLUTION = 768;
-export const MOBILE_RESOLUTION = 320;
+export const MOBILE_RESOLUTION = 480;
 export const MAX_MOVIES_TO_RENDER = {
   desktop: 12,
   tablet: 8,
