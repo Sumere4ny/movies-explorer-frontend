@@ -1,10 +1,4 @@
-.movies-card {
-  display: grid;
-  grid-gap: 60px 23px;
-  gap: 60px 23px;
-  justify-content: center;
-  align-items: center;
-  align-items: stretch;
+.movies-card {  
   padding: 0 10px 80px;
 }
 
@@ -41,7 +35,7 @@
 
 .movies-card__show-more-btn {
   align-self: center;
-  min-width: 240px;
+  width: 100%;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;

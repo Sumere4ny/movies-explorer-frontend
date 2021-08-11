@@ -41,17 +41,22 @@
 
 .preloader {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
-  padding-top: 1%;
-  height: 100%;
-  z-index: 1;
+  /* width: 100%; */
+  /* height: 100%; */
+  z-index: 10;
+  padding: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .preloader__container {
   width: 100px;
   height: 100px;
-  position: fixed;
+  position: relative;
 }
 
 .preloader__round {

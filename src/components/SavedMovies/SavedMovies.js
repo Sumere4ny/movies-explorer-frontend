@@ -1,11 +1,33 @@
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
-function SavedMovies() {
+function SavedMovies({
+  movieDataList,
+  handleSaveMovie,
+  savedMoviesList,
+  handleSearchClick,
+  loader,
+  noResultsToShow,
+  noResultsMessage,
+  savedMoviesSearchResults,
+  toggleShortMovieFilter,
+  shortMovieFilter,
+}) {
   return (
     <section className='saved-movies'>
-      <SearchForm />
-      <MoviesCardList />
+      <SearchForm
+        handleSearchClick={handleSearchClick}
+        toggleShortMovieFilter={toggleShortMovieFilter}
+      />
+      <MoviesCardList
+        handleSaveMovie={handleSaveMovie}
+        savedMoviesList={savedMoviesList}
+        loader={loader}
+        noResultsToShow={noResultsToShow}
+        noResultsMessage={noResultsMessage}
+        savedMoviesSearchResults={savedMoviesSearchResults}
+        shortMovieFilter={shortMovieFilter}
+      />
     </section>
   );
 }
