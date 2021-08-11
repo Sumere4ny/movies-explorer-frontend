@@ -35,6 +35,7 @@ import {
   PROFILE_PAGE,
   NOT_FOUND_PAGE,
   SUCCESS_STATUS,
+  FAIL_STATUS,
 } from '../../utils/constants';
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
   const [savedMoviesSearchResults, setSavedMoviesSearchResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
-  const [currentUser, setCurrentUser] = useState('');
+  const [currentUser, setCurrentUser] = useState({});
   const [shortMovieFilter, setShortMovieFilter] = useState(false);
 
   function toggleShortMovieFilter() {
@@ -269,18 +270,24 @@ function App() {
 
   function updateUserProfile(formData) {
     UserApi.updateUserProfileApi(formData)
-      .then((formData) => {
-        showLoader(true);
-        setCurrentUser(formData);
+      .then((user) => {        
+        if (user) setCurrentUser(formData);
+        showLoader(true);        
+        setTimeout(() => {
+          showLoader(false);          
+        }, 400);
+        setTooltipStatus(SUCCESS_STATUS);
+        setTooltipMessage(USER_DATA_SUCCESSFULLY_UPDATED);
       })
-      .catch((err) => console.log(err))
-      .finally(() => {
+      .catch((err) => {
+        console.log(err);
         setTimeout(() => {
           showLoader(false);
-          setTooltipStatus(SUCCESS_STATUS);
-          setTooltipMessage(USER_DATA_SUCCESSFULLY_UPDATED);
-        }, 400);
-      });
+          setTooltipStatus(FAIL_STATUS);
+          setTooltipMessage(err);
+        }, 400);        
+      })
+      ;
   }
 
   useEffect(() => {

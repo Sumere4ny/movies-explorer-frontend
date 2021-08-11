@@ -1,5 +1,5 @@
 import './Profile.css';
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { useFormWithValidation } from '../../utils/useFormWithValidation';
 import Preloader from '../Preloader/Preloader';
@@ -37,7 +37,7 @@ function Profile({ updateUserProfile, onSignOut, loader }) {
     <section className='profile'>
       {loader && <Preloader />}
       <form className='profile__form' onSubmit={handleSubmit} noValidate>
-        <h2 className='profile__title'>{`Привет, ${name}!`}</h2>
+        <h2 className='profile__title'>{`Привет, ${name || 'Неизвестный'}!`}</h2>
         <div className='profile__container'>
           <label className='profile__label'>
             <div className='profile__label-container'>
@@ -46,7 +46,7 @@ function Profile({ updateUserProfile, onSignOut, loader }) {
                 id='name__input'
                 type='text'
                 name='name'
-                defaultValue={name || ''}
+                defaultValue={name}
                 placeholder='Изменить имя'
                 className='profile__field'
                 minLength='2'
@@ -68,7 +68,7 @@ function Profile({ updateUserProfile, onSignOut, loader }) {
                 id='email__input'
                 type='email'
                 name='email'
-                defaultValue={email || ''}
+                defaultValue={email}
                 placeholder='Изменить E-mail'
                 className='profile__field'
                 minLength='1'
